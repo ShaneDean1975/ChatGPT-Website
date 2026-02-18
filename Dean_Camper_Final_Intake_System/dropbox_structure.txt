@@ -1,0 +1,4 @@
+/Leads
+  /Qualified
+  /Disqualified
+  /No-Response
