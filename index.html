@@ -372,30 +372,41 @@
         /* ===== TRUST BAR ===== */
         .trust-bar {
             background: var(--primary-navy);
-            padding: 28px 40px;
+            padding: 20px 0;
+            overflow: hidden;
+            white-space: nowrap;
         }
 
-        .trust-bar-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
+        .trust-bar-track {
+            display: inline-flex;
             align-items: center;
-            gap: 50px;
-            flex-wrap: wrap;
+            gap: 0;
+            animation: trustScroll 28s linear infinite;
+        }
+
+        .trust-bar:hover .trust-bar-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes trustScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .trust-item {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 10px;
             color: white;
             font-size: 0.95rem;
             font-weight: 500;
+            padding: 0 48px;
+            border-right: 1px solid rgba(255,255,255,0.15);
+            flex-shrink: 0;
         }
 
         .trust-item span.icon {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: var(--gold);
         }
 
@@ -919,8 +930,7 @@
             .attorney-grid { grid-template-columns: 1fr; }
             .cta-buttons { flex-direction: column; }
             .btn { text-align: center; }
-            .trust-bar { padding: 22px 24px; }
-            .trust-bar-inner { gap: 24px; }
+            .trust-bar { padding: 16px 0; }
         }
     </style>
 </head>
@@ -1024,12 +1034,22 @@
 
 <!-- ===== TRUST BAR ===== -->
 <div class="trust-bar">
-    <div class="trust-bar-inner">
+    <div class="trust-bar-track">
         <div class="trust-item"><span class="icon">⭐</span> Super Lawyers Rising Stars</div>
         <div class="trust-item"><span class="icon">🏆</span> Multi-Million Dollar Advocates Forum</div>
         <div class="trust-item"><span class="icon">🏅</span> Million Dollar Advocates Forum</div>
         <div class="trust-item"><span class="icon">⚖️</span> No Fee Unless We Win</div>
         <div class="trust-item"><span class="icon">📞</span> Available 24/7</div>
+        <div class="trust-item"><span class="icon">💼</span> Tens of Millions Recovered</div>
+        <div class="trust-item"><span class="icon">🛡️</span> Free Consultation</div>
+        <!-- Duplicate set for seamless loop -->
+        <div class="trust-item"><span class="icon">⭐</span> Super Lawyers Rising Stars</div>
+        <div class="trust-item"><span class="icon">🏆</span> Multi-Million Dollar Advocates Forum</div>
+        <div class="trust-item"><span class="icon">🏅</span> Million Dollar Advocates Forum</div>
+        <div class="trust-item"><span class="icon">⚖️</span> No Fee Unless We Win</div>
+        <div class="trust-item"><span class="icon">📞</span> Available 24/7</div>
+        <div class="trust-item"><span class="icon">💼</span> Tens of Millions Recovered</div>
+        <div class="trust-item"><span class="icon">🛡️</span> Free Consultation</div>
     </div>
 </div>
 
@@ -1241,13 +1261,12 @@
                 </div>
                 <div class="attorney-body">
                     <p>
-                        Shane Dean has recovered millions of dollars representing victims in personal injury and wrongful death claims across Florida and Alabama. Selected to the Florida Super Lawyers Rising Stars list for three consecutive years, Mr. Dean is a member of the prestigious Multi-Million Dollar Advocates Forum — a distinction held by fewer than 1% of U.S. attorneys.
+                        Shane Dean has recovered tens of millions for injury victims across Florida and Alabama. A Florida Super Lawyers Rising Stars honoree and Multi-Million Dollar Advocates Forum member, he prepares every case for trial from day one.
                     </p>
                     <ul class="credentials">
                         <li>Florida Bar — Licensed &amp; Active</li>
                         <li>Florida Super Lawyers Rising Stars (3 Consecutive Years)</li>
                         <li>Multi-Million Dollar Advocates Forum Member</li>
-                        <li>Serving Pensacola, Fort Walton Beach, Destin, Crestview &amp; Mobile</li>
                     </ul>
                     <a href="shane-dean.html" class="btn btn-primary" style="margin-top:28px; display:inline-block;">View Full Profile &rarr;</a>
                 </div>
@@ -1266,14 +1285,12 @@
                 </div>
                 <div class="attorney-body">
                     <p>
-                        Chad Camper has recovered millions of dollars for injury victims. A member of the Million Dollar Advocates Forum, Mr. Camper proudly served five years in the U.S. Air Force and received the prestigious John L. Levitow Award — the Air Force's highest honor for enlisted professional military education.
+                        Chad Camper has recovered millions for injury victims throughout the Gulf Coast. A U.S. Air Force veteran and Million Dollar Advocates Forum member, he brings military discipline and relentless advocacy to every case.
                     </p>
                     <ul class="credentials">
                         <li>Florida Bar &amp; West Virginia Bar</li>
-                        <li>Florida Super Lawyers Rising Star (2015)</li>
                         <li>Million Dollar Advocates Forum Member</li>
                         <li>U.S. Air Force Veteran — John L. Levitow Award</li>
-                        <li>West Virginia University College of Law (J.D.)</li>
                     </ul>
                     <a href="chad-camper.html" class="btn btn-primary" style="margin-top:28px; display:inline-block;">View Full Profile &rarr;</a>
                 </div>
