@@ -186,13 +186,18 @@
         .attorney-image-placeholder {
             width: 100%;
             height: 500px;
-            background: rgba(255,255,255,0.1);
             border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 8rem;
-            border: 2px solid rgba(212, 175, 55, 0.3);
+            overflow: hidden;
+            border: 3px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .attorney-image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            display: block;
         }
 
         /* Content Section */
@@ -550,7 +555,7 @@
                 <a href="tel:8504333077" class="btn">Call Now: (850) 433-3077</a>
             </div>
             <div class="attorney-image-placeholder">
-                👨‍⚖️
+                <img src="chad-camper-photo-new.jpg" alt="Chad Camper - Personal Injury Attorney at Dean &amp; Camper P.A." loading="eager">
             </div>
         </div>
     </section>
